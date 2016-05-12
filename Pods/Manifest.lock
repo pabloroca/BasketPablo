@@ -1,0 +1,17 @@
+PODS:
+  - Alamofire (3.4.0)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
+  - PR2StudioSwift (0.1.5):
+    - Alamofire (~> 3.0)
+    - AlamofireImage (~> 2.0)
+
+DEPENDENCIES:
+  - PR2StudioSwift
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  PR2StudioSwift: 2a5323a4946f1c27fdec52fea698a575e60c07b5
+
+COCOAPODS: 0.39.0

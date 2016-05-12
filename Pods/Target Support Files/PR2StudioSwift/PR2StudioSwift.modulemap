@@ -1,0 +1,6 @@
+framework module PR2StudioSwift {
+  umbrella header "PR2StudioSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

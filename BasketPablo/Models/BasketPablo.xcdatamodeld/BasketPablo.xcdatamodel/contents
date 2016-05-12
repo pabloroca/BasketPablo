@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="CDEBasket" representedClassName="CDEBasket" syncable="YES">
+        <attribute name="ts" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="units" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="rBaskettoCurrency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDECurrency" inverseName="rCurrencytoBasket" inverseEntity="CDECurrency" syncable="YES"/>
+        <relationship name="rBaskettoGoods" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEGoods" inverseName="rGoodstoBasket" inverseEntity="CDEGoods" syncable="YES"/>
+    </entity>
+    <entity name="CDECurrency" representedClassName="CDECurrency" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rCurrencytoBasket" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDEBasket" inverseName="rBaskettoCurrency" inverseEntity="CDEBasket" syncable="YES"/>
+        <relationship name="rCurrencytoExchange" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEExchange" inverseName="rExchangetoCurrency" inverseEntity="CDEExchange" syncable="YES"/>
+    </entity>
+    <entity name="CDEExchange" representedClassName="CDEExchange" syncable="YES">
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="exchange" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="rExchangetoCurrency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDECurrency" inverseName="rCurrencytoExchange" inverseEntity="CDECurrency" syncable="YES"/>
+    </entity>
+    <entity name="CDEGoods" representedClassName="CDEGoods" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="unittype" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rGoodstoBasket" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDEBasket" inverseName="rBaskettoGoods" inverseEntity="CDEBasket" syncable="YES"/>
+    </entity>
+    <entity name="CDESettings" representedClassName="CDESettings" syncable="YES">
+        <attribute name="currencybase" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currencyexchange" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currencyselected" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tscurrency" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="tsexchange" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="tsgoods" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDEBasket" positionX="-36" positionY="-162" width="128" height="103"/>
+        <element name="CDECurrency" positionX="-261" positionY="-81" width="128" height="103"/>
+        <element name="CDEExchange" positionX="-243" positionY="110" width="128" height="90"/>
+        <element name="CDEGoods" positionX="-20" positionY="5" width="128" height="118"/>
+        <element name="CDESettings" positionX="-254" positionY="-261" width="128" height="135"/>
+    </elements>
+</model>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BasketPablo  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="BasketPablo  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">BasketPablo Docs</a> (41% documented)</p>
+        <p class="header-right"><a href="https://github.com/pabloroca/BasketPablo"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fgithub%2Ecom%2Fpabloroca%2FBasketPablo%2Fdocs%2Fswift_output%2Fdocsets%2FBasketPablo%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">BasketPablo Reference</a>
+        <img id="carat" src="img/carat.png" />
+        BasketPablo  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BasketDataController.html">BasketDataController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BasketTableViewCell.html">BasketTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BasketViewController.html">BasketViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CDEBasket.html">CDEBasket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CDECurrency.html">CDECurrency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CDEExchange.html">CDEExchange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CDEGoods.html">CDEGoods</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CDESettings.html">CDESettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CurrencyDataController.html">CurrencyDataController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CurrencyNetworkController.html">CurrencyNetworkController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CurrencyTableViewCell.html">CurrencyTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CurrencyTableViewController.html">CurrencyTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ExchangeDataController.html">ExchangeDataController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ExchangeNetworkController.html">ExchangeNetworkController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GoodsDataController.html">GoodsDataController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GoodsNetworkController.html">GoodsNetworkController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GoodsTableViewCell.html">GoodsTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GoodsViewController.html">GoodsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MainTabbarViewController.html">MainTabbarViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SettingsDataController.html">SettingsDataController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/MainTab.html">MainTab</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Constants.html">Constants</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/EndPoints.html">EndPoints</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Notifications.html">Notifications</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#main_specs' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='main_specs'>Main specs:</h2>
+
+<ul>
+<li>Developed in SWIFT 2.2, requires XCode 7.3 to run it</li>
+<li>iOS 9.0 compatible</li>
+<li>CocoaPods</li>
+<li>using MVC (VIPER is a bit too much for this exercise)</li>
+<li>Network requests in the background</li>
+<li>Network requests recursively repeated if temporary error (increasing delay till 30 second)</li>
+<li>Network requests applied Apple recommendations (see <q>Network requests failures</q> below)</li>
+<li>Network Log network requests/responses to console with different logs levels</li>
+<li>Network using HTTPS (see below)</li>
+<li>Network requests cached</li>
+<li>Pull to refresh goods (cleans basket)</li>
+<li>Unit tests</li>
+<li>plist with UIRequiresPersistentWiFi (like Apple&rsquo;s mail app)</li>
+<li>AutoLayout</li>
+<li>Network waiting indicators in status bar</li>
+<li>Push Notification for implementing slow internet connectivity messaging in the UI</li>
+<li>HeaderDoc HTML based documentation. Generated using jazzy. in docs/swift_output/index.html</li>
+<li>using SwiftLint to enforce Swift coding style and conventions</li>
+<li>Maximized Xcode Warnings (XcodeWarnings.xcconfig) (<a href="http://qualitycoding.org/xcode-warnings">http://qualitycoding.org/xcode-warnings</a>)</li>
+<li><p>Using as few external libraries as possible:</p></li>
+<li><p>Alamofire</p></li>
+</ul>
+<a href='#pr2studio_classes' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='pr2studio_classes'>PR2Studio classes</h2>
+
+<p>I applied some of my own classes I use to develop in Swift. They are implemented as a pod (PR2StudioSwift)</p>
+<a href='#storyboards' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='storyboards'>Storyboards</h2>
+
+<p>For this sample I will use Storyboards, but I much prefer to use NIBs than storyboards, storyboards are really a problem in team 
+development (because git conflicts) and with NIBs you have more flexibility to enable different behaviors.</p>
+<a href='#problems_with_end_points' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='problems_with_end_points'>Problems with End Points</h2>
+
+<p><a href="http://jsonrates.com">http://jsonrates.com</a> has changed and <a href="http://jsonrates.com/currencies.json">http://jsonrates.com/currencies.json</a> is not longer available. I must request to the substitute for it, who is at <a href="https://currencylayer.com">https://currencylayer.com</a></p>
+
+<p>In the free tier at currencylayer.com, you can not change source currency, it is USD by default. So I will asume that goods are in USD.</p>
+<a href='#solid_principles' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='solid_principles'>SOLID principles</h2>
+
+<p>Trying to apply SOLID principles and Clean Code, specially the Single Responsability. Classes must be lightewigth and perform only one task inside his abstraction layer. So it&rsquo;s better to have more classes that one big bloated class</p>
+<a href='#cache' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='cache'>CACHE</h2>
+
+<p>Goods are cached by one day, there is a pull to refresh for retrieving goods again (empties basket)
+Currencies are cached by one day
+Exchanges are cached by 60 mins (as they do in the free tier)</p>
+<a href='#network_logger' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_logger'>Network logger</h2>
+
+<p>Logs into the console the network requests and responses. It&rsquo;s instantiated in AppDelegate.swift, here:</p>
+<pre class="highlight plaintext"><code>PR2Networking.sharedInstance.logLevel = PR2NetworkingLogLevel.PR2NetworkingLogLevelInfo
+</code></pre>
+
+<p>logLevel can be:</p>
+
+<ul>
+<li>PR2NetworkingLogLevelOff - log disabled</li>
+<li>PR2NetworkingLogLevelDebug - logs full requests and responses</li>
+<li>PR2NetworkingLogLevelInfo - log with short info</li>
+<li>PR2NetworkingLogLevelError - logs only when errors</li>
+</ul>
+<a href='#swiftlint' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='swiftlint'>SwiftLint</h2>
+
+<p><a href="https://github.com/realm/SwiftLint">https://github.com/realm/SwiftLint</a></p>
+
+<p>A tool for enforcing good code style.</p>
+
+<p>Install: brew install swiftlint</p>
+
+<p>The run script is deactivated, just in case you don&rsquo;t have it installed. To reenable, uncomment lines in Run Script Phase we have in the target</p>
+<a href='#jazzy_doc_generation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='jazzy_doc_generation'>jazzy (Doc generation)</h2>
+
+<p><a href="https://github.com/realm/jazzy">https://github.com/realm/jazzy</a></p>
+<pre class="highlight plaintext"><code>jazzy \
+  --clean \
+  --author PabloRoca \
+  --author_url https://pr2studio.com \
+  --github_url https://github.com/pabloroca/BasketPablo \
+  --module-version 1.00 \
+  --xcodebuild-arguments -scheme,BasketPabloDoc \
+  --module BasketPablo \
+  --root-url https://github.com/pabloroca/BasketPablo/docs/swift_output/index.html \
+  --output docs/swift_output \
+  --min-acl internal 
+</code></pre>
+<a href='#database' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='database'>Database</h2>
+
+<p>I have created this CoreData entities (sqlite tables):</p>
+
+<ul>
+<li>CDEBasket. Goods added to the basket</li>
+<li>CDECurrency. List of currencies</li>
+<li>CDEExchange. Exchange rates</li>
+<li>CDEGoods. List of goods</li>
+<li>CDESettings. Settings and time stamp for cache</li>
+</ul>
+
+<p>I use relationships between entities (one to one and one to many), with delete cascade rules</p>
+<a href='#network_using_https' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_using_https'>Network using HTTPS</h2>
+
+<p>Main reasons for using HTTPS is for now, a bit (just a bit more security in network comms) and better speed. See article by Scott Helme why to use HTTPS (<a href="https://scotthelme.co.uk/still-think-you-dont-need-https/">https://scotthelme.co.uk/still-think-you-dont-need-https/</a>)</p>
+
+<p>The server is not properly configured for HTTPS (Qualys SSL Test grade B, key exchange using weak Diffie-Hellman (DH), no CSP, no Strict Transport Security (HSTS), Public Key Pins not configured and other security flaws).</p>
+
+<p>If HPKP were configured, I would use SSL Public Key Pinning inestead certificate pinning. I would be using TrustKit (<a href="https://github.com/datatheorem/TrustKit">https://github.com/datatheorem/TrustKit</a>) for it. With TrustKit it&rsquo;s easy to enable and avoid a man in the middle attack.</p>
+<a href='#network_requests_failures' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='network_requests_failures'>Network requests failures</h2>
+
+<p>This is not a trivial issue, some debate ongoing and as per this docs</p>
+
+<p>Networking Overview
+<a href="https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/WhyNetworkingIsHard/WhyNetworkingIsHard.html#//apple_ref/doc/uid/TP40010220-CH13-SW8">https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/WhyNetworkingIsHard/WhyNetworkingIsHard.html#//apple_ref/doc/uid/TP40010220-CH13-SW8</a></p>
+
+<p>WWDC 2012 Session 706, <q>Networking Best Practices</q>
+<a href="https://developer.apple.com/videos/play/wwdc2012-706/">https://developer.apple.com/videos/play/wwdc2012-706/</a></p>
+
+<p>Almofire documentation
+<a href="https://github.com/Alamofire/Alamofire">https://github.com/Alamofire/Alamofire</a></p>
+
+<p>So we conclude with this (and it is applied in the exercise):</p>
+
+<ul>
+<li>Don&rsquo;t use Rechability to determine if a network request should be sent. You should always send the request.</li>
+<li>Analize Reachability if failures. When Reachability is restored, use the event to retry failed network requests. (Even though the network requests may still fail, this is a good moment to retry them.)</li>
+<li>Don&rsquo;t timeout, let the system to do it. There is no good timeout value</li>
+</ul>
+<a href='#todo' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='todo'>TODO</h2>
+
+<ul>
+<li>complete HeaderDoc documentation.</li>
+</ul>
+<a href='#to_enhance' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='to_enhance'>To enhance</h2>
+
+<ul>
+<li>more use of protocols</li>
+<li>Better CoreData stack</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://pr2studio.com" target="_blank" rel="external">PabloRoca</a>. All rights reserved. (Last updated: 2016-05-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

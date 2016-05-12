@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  BaPablo
+
+  Created by Pablo Roca Rozas on 23/4/16.
+  Copyright © 2016 PR2Studio. All rights reserved.
+*/
+
+"Error" = "Error";
+"OK" = "OK";
+
+// Error messages
+
+"ErrMsgSlowInternet"   = "Slow internet connectivity, be patient ...";
+
+// No data available
+"ErrMsgNodataMsg" = "No data is currently available. Please pull down to refresh.";
+
+// No data in basket
+"ErrMsgNodatainBasketMsg" = "Basket is empty";
+
+// No data for currencies
+"ErrMsgNodataCurrencyMsg" = "No data is currently available. Come back later.";
+
+// main tabbar
+"MainTab.TabGoods"  = "Goods";
+"MainTab.TabBasket" = "CheckOut";
+
+// Goods Tab
+"Goods.title" = "Goods - price in USD";
+
+// Basket Tab
+"Basket.title" = "Basket";
+
+// Currency Screen
+"Currency.title" = "Select a Currency";
+
+// Navigation
+"NavigationBackButton" = "Back";
+
