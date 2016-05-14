@@ -153,13 +153,18 @@ class BasketViewController: UITableViewController {
       self.dataController.updateItemInBasket(item, units: Int(sender.value), completionHandler: { (success) in
          self.updateBasketBadge()
       })
-      self.reloadData()
-//      // refresh all table or only one cell
-//      if sender.value == 0 {
-//         self.reloadData()
-//      } else {
-//         self.viewTable.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
-//      }
+      // recalculate total
+      self.dataController.readFromLocalData(nil) { (success, data, total) in
+         self.lblTotal.text = String(format: "%.2f", total)
+      }
+
+      // 0 = delete row, != 0 update row
+      if sender.value == 0 {
+         self.arrData.removeAtIndex(indexPath.row)
+         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+      } else {
+         self.viewTable.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+      }
    }
    
 }
