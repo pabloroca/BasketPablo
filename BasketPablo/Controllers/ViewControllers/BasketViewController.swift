@@ -125,6 +125,28 @@ class BasketViewController: UITableViewController {
       return cell
    }
    
+   override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+      return true
+   }
+   
+   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+      if (editingStyle == UITableViewCellEditingStyle.Delete) {
+         // handle Delete
+         let item = self.arrData[indexPath.row]
+         self.dataController.updateItemInBasket(item, units: 0, completionHandler: { (success) in
+            self.updateBasketBadge()
+         })
+         self.arrData.removeAtIndex(indexPath.row)
+         
+         // recalculate total
+         self.dataController.readFromLocalData(nil) { (success, data, total) in
+            self.lblTotal.text = String(format: "%.2f", total)
+         }
+         
+         tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+      }
+   }
+   
    @IBAction func stepMinusPlusAction(sender: UIStepper) {
       let point = sender.convertPoint(CGPoint(x: 0, y: 0), toView: tableView)
       let indexPath = self.tableView.indexPathForRowAtPoint(point)!
