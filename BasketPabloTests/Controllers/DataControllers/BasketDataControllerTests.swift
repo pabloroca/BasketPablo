@@ -78,7 +78,7 @@ class BasketDataControllerTests: XCTestCase {
 
       self.goodsDatacontroller.addIntoLocalDatafromJSON(jsonGoods!, completionHandler: { (success) in
          self.goodsDatacontroller.readFromLocalData(nil, completionHandler: { (success, data) in
-            guard let results = data  else {
+            guard let results = data else {
                XCTFail()
                return
             }

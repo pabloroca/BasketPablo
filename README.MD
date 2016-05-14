@@ -24,9 +24,30 @@
 
 * Alamofire
 
+## Requirements to run
+
+* iOS9
+* XCode 7.3
+* Swiflint
+
+## SwiftLint
+
+Is a tool to enforce Swift style coding and conventions
+https://github.com/realm/SwiftLint
+
+Install: brew install swiftlint
+
+It is implemented as a run script, if you don't want to install it, comment or remove the run script in the target.
+
 ## PR2Studio classes
 
-I applied some of my own classes I use to develop in Swift. They are implemented as a pod (PR2StudioSwift)
+I applied some of my own classes I use to develop in Swift. They are implemented as a pod (PR2StudioSwift). There is no need to run a pod install cause pods are deployed in this git repository.
+
+If you do a pod install, you would need to add this as first line
+
+#include "XcodeWarnings.xcconfig"
+
+In the Pods-BasketPablo.debug.xcconfig file
 
 ## Storyboards
 
@@ -61,15 +82,6 @@ logLevel can be:
 * PR2NetworkingLogLevelDebug - logs full requests and responses
 * PR2NetworkingLogLevelInfo - log with short info
 * PR2NetworkingLogLevelError - logs only when errors
-
-## SwiftLint
-https://github.com/realm/SwiftLint
-
-A tool for enforcing good code style.
-
-Install: brew install swiftlint
-
-The run script is deactivated, just in case you don't have it installed. To reenable, uncomment lines in Run Script Phase we have in the target
 
 ## jazzy (Doc generation)
 https://github.com/realm/jazzy
