@@ -136,13 +136,12 @@ class BasketViewController: UITableViewController {
          self.dataController.updateItemInBasket(item, units: 0, completionHandler: { (success) in
             self.updateBasketBadge()
          })
-         self.arrData.removeAtIndex(indexPath.row)
-         
          // recalculate total
          self.dataController.readFromLocalData(nil) { (success, data, total) in
             self.lblTotal.text = String(format: "%.2f", total)
          }
-         
+
+         self.arrData.removeAtIndex(indexPath.row)
          tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
       }
    }
